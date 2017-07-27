@@ -13,7 +13,7 @@ public class Zombiespawner : MonoBehaviour
         int zombiesToSpawn = (int)Mathf.Pow(2, nextWave);
         for(int i = 0; i < zombiesToSpawn; i++)
         {
-            Vector3 zPos = new Vector3(Random.Range(-114, 83), -3, Random.Range (-108, 103));
+            Vector3 zPos = new Vector3(Random.Range(-104, 73), -3, Random.Range (-98, 93));
             Instantiate(zombiePrefab, zPos, transform.rotation);
             zombiePrefab.GetComponent<NavMeshAgent>().Warp(zPos);
                 zombiesAlive++;
