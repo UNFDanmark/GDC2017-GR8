@@ -109,12 +109,6 @@ public void Torso(GameObject pickUpBody)
     }
 
     public void TakeDamage() {
-        if (torso.activeSelf == true)
-        {
-            torso.SetActive(false);
-            return;
-        }
-
         if (head.activeSelf)
         {
             head.SetActive(false);
@@ -130,6 +124,11 @@ public void Torso(GameObject pickUpBody)
         if (rArm.activeSelf)
         {
             rArm.SetActive(false);
+            return;
+        }
+        if (torso.activeSelf == true)
+        {
+            torso.SetActive(false);
             return;
         }
 
