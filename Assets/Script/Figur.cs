@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Figur : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Figur : MonoBehaviour
     public AudioSource myAudio;
     public AudioClip Walkingsound;
     public AudioSource Punchingsound;
+    public float cooldown;
+    public float timer;
 
     void Awake()
     {
@@ -31,12 +34,14 @@ public class Figur : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-        //Movement Controls
     {
+        timer = timer - Time.deltaTime;
         transform.Rotate(0, rotationSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0);
 
-        if (Input.GetKey(attackButton))
+        if (Input.GetKey(attackButton) && timer <= 0)
         {
+
+            timer = cooldown;
             if (killBoks.gameObject.activeInHierarchy == false)
             {
                 killBoks.gameObject.SetActive(true); 
@@ -101,5 +106,33 @@ public void Torso(GameObject pickUpBody)
         {
             RArm(collider.gameObject);
         }
+    }
+
+    public void TakeDamage() {
+        if (torso.activeSelf == true)
+        {
+            torso.SetActive(false);
+            return;
+        }
+
+        if (head.activeSelf)
+        {
+            head.SetActive(false);
+            return;
+        }
+
+        if (lArm.activeSelf)
+        {
+            lArm.SetActive(false);
+            return;
+        }
+
+        if (rArm.activeSelf)
+        {
+            rArm.SetActive(false);
+            return;
+        }
+
+        SceneManager.LoadScene("Lose");
     }
 }
