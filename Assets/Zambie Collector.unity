@@ -10644,7 +10644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &488192448
 Transform:
   m_ObjectHideFlags: 0
@@ -19632,6 +19632,10 @@ Prefab:
       propertyPath: m_Name
       value: Zambie Arm Right
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 905b122c472d1914796a4fbe24117323, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d8e8c4ed49a4df248ab65ae9c2bd963a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 905b122c472d1914796a4fbe24117323, type: 3}
   m_IsPrefabParent: 0
@@ -38843,6 +38847,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 905b122c472d1914796a4fbe24117323, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d8e8c4ed49a4df248ab65ae9c2bd963a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 905b122c472d1914796a4fbe24117323, type: 3}
   m_IsPrefabParent: 0
@@ -46270,7 +46278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1789201541
 Transform:
   m_ObjectHideFlags: 0
