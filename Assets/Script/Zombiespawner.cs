@@ -7,6 +7,7 @@ public class Zombiespawner : MonoBehaviour
     public int nextWave = 1;
     public int zombiesAlive = 0;
     public GameObject zombiePrefab;
+    public AudioSource zombieSpawn;
 
     public void SpawnWave()
     {
@@ -17,8 +18,8 @@ public class Zombiespawner : MonoBehaviour
             Instantiate(zombiePrefab, zPos, transform.rotation);
             zombiePrefab.GetComponent<NavMeshAgent>().Warp(zPos);
                 zombiesAlive++;
-
         }
+        zombieSpawn.Play();
     }
 
     // Use this for initialization
