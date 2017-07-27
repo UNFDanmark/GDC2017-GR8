@@ -17,7 +17,7 @@ public class Figur : MonoBehaviour
     public Killboks killBoks;
     public AudioSource myAudio;
     public AudioClip Walkingsound;
-    public AudioSource Punchingsound;
+    public AudioSource Punchingsound, Attack;
     public float cooldown;
     public float timer;
 
@@ -39,11 +39,11 @@ public class Figur : MonoBehaviour
         transform.Rotate(0, rotationSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0);
 
         if (Input.GetKey(attackButton) && timer <= 0)
-        {
-
+        {           
             timer = cooldown;
             if (killBoks.gameObject.activeInHierarchy == false)
             {
+                Attack.Play();
                 killBoks.gameObject.SetActive(true); 
             }
 
