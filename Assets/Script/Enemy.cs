@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
 
     public void KillPlayer()
     {
-        SceneManager.LoadScene("Lose");
+        playerZambieew.TakeDamage();
     }
 
 }
