@@ -116,9 +116,9 @@ GameObject:
   - 23: {fileID: 23000011032514114}
   - 54: {fileID: 54000014045495334}
   - 114: {fileID: 114000010187336422}
-  - 82: {fileID: 82000013617016312}
   - 81: {fileID: 81000012289350850}
   - 195: {fileID: 195000014066276562}
+  - 82: {fileID: 82000014204306808}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Enemy
@@ -377,7 +377,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011612777728}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: -58}
+  m_LocalPosition: {x: -38, y: -3, z: 32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -484,8 +484,8 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011612777728}
-  m_Enabled: 1
---- !u!82 &82000013617016312
+  m_Enabled: 0
+--- !u!82 &82000014204306808
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -494,11 +494,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c288ba2a3eb6e154a97d89b38c126d53, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5b71c40db8f270b45803bb0f6eb7c583, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 0.37
-  Loop: 1
+  m_Volume: 0.019
+  m_Pitch: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   Priority: 128
